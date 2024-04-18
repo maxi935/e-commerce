@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../../partials/head', {titulo : 'Modificar' , estilo : 'crearProducto.css' }) %>
+
+    <body>
+        <%- include('../../partials/header') %>
+
+            <main class="main-adminProducto">
+                <div class="form-registro">
+                <form action="/admin/modificarusuario/<%= cliente.idcliente %>?_method=PUT" method="post"
+                class="form-crearProducto">
+                    <!--nombre-->
+                    <div class="input-box">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" value="<%= cliente.nombre %>"
+                            class="e-marca" selected />
+                        <!--Errores-->
+                        <% if (locals.errors && errors.nombre) { %>
+                            <div>
+                                <%= errors.nombre.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <!--dni-->
+                    <div class="input-box">
+                        <label for="dni">dni</label>
+                        <input type="text" name="dni" value="<%= cliente.dni %>"
+                            class=" e-tipo" selected />
+                        <!--Errores-->
+                        <% if (locals.errors && errors.dni) { %>
+                            <div>
+                                <%= errors.dni.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <!--fecha_nac-->
+                    <div class="input-box">
+                        <label for="fecha_nac">fecha_nac</label>
+                        <input type="date" class="e-descripcion" name="fecha_nac" id="comentario" cols="30"
+                            rows="5"><%= cliente.fecha_nac %></textarea>
+                    </div>
+                    <!--comentario para los errores-->
+                    <% if (locals.errors && errors.fecha_nac) { %>
+                        <div>
+                            <%= errors.fecha_nac.msg %>
+                        </div>
+                        <% } %>
+                            <!--email-->
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" value="<%= cliente.email %>"
+                            class=" e-tipo" selected />
+                        <!--Errores-->
+                        <% if (locals.errors && errors.email) { %>
+                            <div>
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                            <!--celular-->
+                    <div class="input-box">
+                        <label for="celular">celular</label>
+                        <input type="text" name="celular" value="<%= cliente.celular %>"
+                            class=" e-tipo" selected />
+                        <!--Errores-->
+                        <% if (locals.errors && errors.celular) { %>
+                            <div>
+                                <%= errors.celular.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                            <!--direccion-->
+                    <div class="input-box">
+                        <label for="direccion">direccion</label>
+                        <input type="text" name="direccion" value="<%= cliente.direccion %>"
+                            class=" e-tipo" selected />
+                        <!--Errores-->
+                        <% if (locals.errors && errors.direccion) { %>
+                            <div>
+                                <%= errors.direccion.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                            <!--password-->
+                    <div class="input-box">
+                        <label for="password">password</label>
+                        <input type="text" name="password" value="<%= cliente.password %>"
+                            class=" e-tipo" selected />
+                        <!--Errores-->
+                        <% if (locals.errors && errors.password) { %>
+                            <div>
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                            <div class="boton-crear">
+                                <button type="submit" name="accion" value="modificar">Modificar</button>
+                            </div>
+
+                </form>
+            </div>
+                <!--ERRORES FRONT-->
+                <section class="errores-front">
+                    <ul></ul>
+                </section>
+                <div class="boton-volver">
+                    <a href="/admin/productos"><button><i class="fa-regular fa-circle-left"></i></button></a>
+                </div>
+            </main>
+            <!-- <%- include('../../partials/footer') %> -->
+    </body>
+
+</html>

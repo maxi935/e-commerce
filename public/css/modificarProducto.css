@@ -1,0 +1,45 @@
+.main-modificarProducto{
+    background-color: #ffd00185;
+    height: 100%;
+    
+}
+.form-modificarProducto{
+padding: 10px;
+}
+.form-input-modificar{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.form-input-modificar input{
+    border-radius: 4px;
+    outline: 0;
+}
+.boton-modificar{
+    display: flex;
+    padding: 10px;
+}
+.boton-volver{
+    padding: 10px;
+   
+}
+
+/*Tablet*/
+@media (min-width:460px) {
+    
+
+    
+    
+  }
+  
+  
+  /*Desktop*/
+  @media (min-width: 768px) {
+    
+    .form-input-modificar {
+        
+        width: 728px;
+    }
+    
+    
+  }

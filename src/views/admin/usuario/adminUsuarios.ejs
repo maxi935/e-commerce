@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head-->
+<%- include('../../partials/head.ejs', {titulo: "Admin" , estilo: "admin.css" })%>
+
+    <body>
+        <!--Header-->
+        <%- include('../../partials/header.ejs')%>
+            <!--Main-->
+            <main>
+                <%- include('../../partials/botonesAdmin.ejs') %>
+                    <section>
+                        <!--SEARCH-->
+                        <!-- <form action="/admin/productos/buscar" method="get" class="buscador-caja">
+                            <input class="buscador" type="search" name="buscar" placeholder="Buscador">
+                        </form> -->
+                        
+                    </section>
+                    <section class="productos-main-caja">
+                        <% for (let i=0; i < clientes.length; i++) { %>
+                            <article class="productos-caja">
+                                <div class="productos-caja-2">
+                                    <div>
+                                        <strong>Nombre:</strong> $<%= clientes[i].nombre %>
+                                    </div>
+                                    <div>
+                                        <strong>DNI:</strong> <%= clientes[i].dni %>
+                                    </div>
+                                    <div>
+                                        <strong>Fecha de Nacimiento:</strong> <%= clientes[i].fecha_nac %>
+                                    </div>
+                                    <div>
+                                        <strong>Email:</strong> <%= clientes[i].email %>
+                                    </div>
+                                    <div>
+                                        <strong>Celular:</strong> <%= clientes[i].celular %>
+                                    </div>
+                                    <div>
+                                        <strong>Dirección:</strong> <%= clientes[i].direccion %>
+                                    </div>
+                                    <div class="productos-caja-2-botones">
+                                        <a class="productos-caja-2-boton" href="/admin/modificarUsuario/<%= clientes[i].idcliente %>">Modificar</a>
+
+                                        <form action="/admin/usuarios/<%= clientes[i].idcliente %>?_method=DELETE"
+                                            method="post"
+                                            class="productos-caja-2-boton">
+                                            <button >Borrar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </article>
+                            <% } %>
+                    </section>
+            </main>
+            <script src="/js/adminProductos.js"></script>
+            <script src="/js/admin.js"></script>
+    </body>
+
+</html>

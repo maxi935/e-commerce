@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {titulo : 'Detalles' , estilo : 'detalleproducto.css' }) %>
+
+
+    <body>
+        <a href="/productos/carrito">
+            <button class="header-carro">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+            </button>
+        </a>
+        <%- include('../partials/header')%>
+        <section>
+            <%- include('../partials/carrouselProductos') %>
+        </section>
+        <section>
+            <!--SEARCH-->
+            <form action="/productos/buscar" method="get" class="buscador-caja">
+                <input class="buscador" type="search" name="buscar" placeholder="Buscador">
+            </form>
+            
+        </section>
+            <section>
+                <%- include('../partials/carrouselCategorias') %>
+            </section>
+            <section>
+                <strong>También te puede interesar</strong>
+                <%- include('../partials/productosConcurrentes') %>
+            </section>
+
+            <%- include('../partials/footer')%>
+    </body>
+
+</html>

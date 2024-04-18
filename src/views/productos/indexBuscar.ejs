@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {titulo : 'Detalles' , estilo : 'detalleproducto.css' }) %>
+
+
+    <body>
+        <a href="/productos/carrito">
+            <button class="header-carro">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+            </button>
+        </a>
+        <%- include('../partials/header')%>
+        <section>
+            <%- include('../partials/carrouselProductos') %>
+        </section>
+        <section>
+            <!--SEARCH-->
+            <form action="/productos/buscar" method="get" class="buscador-caja">
+                <input class="buscador" type="search" name="buscar" placeholder="Buscador">
+            </form>
+            
+        </section>
+            <section>
+                <section class="productos-main-caja">
+                <% for (let i=0; i < productos.length; i++) { %>
+                    <div>
+                        <strong>
+                            <%= productos[i].nombre %>
+                        </strong>
+                
+                    </div>
+                        
+                            <article class="productos-caja">
+                                <a href="/productos/detalle/<%= productos[i].idproducto %>">
+                                    <div class="productos-caja-1">
+                                        <img class="avatar-imagen" src="/img/avatars/<%= productos[i].avatar %>"
+                                            alt="avatar">
+                                        </div>
+                                    </a>
+                                    <div class="productos-caja-2">
+                                        <%= productos[i].marca %><br>
+                                            $<%= productos[i].precio %>
+                                        </div>
+                                        <div class="productos-caja-2-botones">
+                                            <form action="/productos/agregarcarrito" method="post">
+                                                <input type="hidden" name="cantidad" value="1">
+                                                <!-- Input de tipo hidden con nombre y valor fijos -->
+                                                <input type="hidden" name="idproducto" value="<%= productos[i].idproducto %>">
+                                                <button type="submit" class="add">AGREGAR</button>
+                                            </form>
+                                            
+                                    </div>
+                                    </article>
+                            
+                
+                                    <% } %>
+                                </section>
+            </section>
+            
+
+            <%- include('../partials/footer')%>
+    </body>
+
+</html>

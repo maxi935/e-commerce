@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', {estilo : "usuario.css" , titulo : "Usuario"
+  }) %>
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <body>
+    <%- include('../partials/header.ejs')%>
+
+    <main>
+      <div class="form-registro">
+        <form action="/usuario/login" method="post" class="e-form">
+          <h1>Cuenta</h1>
+
+          <div class="input-box">
+            <label for="email">Email</label>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="asd@gmail.com"
+                value="<%= locals.old && old.email ? old.email : '' %>"
+              class="email e-email"/>
+              <i class="bx bxs-user"></i>
+              <!--comentario para los errores-->
+              <% if (locals.errors && errors.email) { %>
+              <div class="text-danger"><%= errors.email.msg %></div>
+              <% } %>
+            </div>
+          </div>
+          
+          <div class="input-box">
+            <label for="password">Contraseña</label>
+            <div>
+              <input type="password" name="password" placeholder="Contraseña" class="e-password"/>
+              <i class="bx bxs-lock-alt"></i>
+              <!--comentario para los errores-->
+              <% if (locals.errors && errors.password) { %>
+              <div class="text-danger"><%= errors.password.msg %></div>
+              <% } %>
+            </div>
+          </div>
+
+          <div>
+            <input type="checkbox" name="recordarUsuario" /> Recordar mi Usuario
+          </div>
+          <input type="hidden" name="action" value="login">
+          <button type="submit" class="boton-registro">Ingresar</button>
+        </form>
+        <!--ERRORES FRONT-->
+        <section class="errores-front">
+          <ul></ul>
+      </section>
+      </div>
+    </main>
+
+    <%- include('../partials/footer.ejs')%>
+    <script src="/js/errors-forms-user.js"></script>
+  </body>
+</html>

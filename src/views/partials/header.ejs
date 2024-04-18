@@ -1,0 +1,25 @@
+<header>
+  <nav>
+    <div class="menu-container">
+      <i id="iconoMenu" class="fa-solid fa-ellipsis toggle-btn"></i>
+      <ul id="menu">
+        <% if (locals.isLogged) { %>
+          <li><a href="/">Home</a></li>
+          <li><a href="/productos">Producto</a></li>
+          <li><a href="/productos/carrito">Carrito</a></li>
+          <li><a href="/usuario/profile">Perfil</a></li>
+          <% if (locals.userEmail && locals.userEmail === 'maxi-935@hotmail.com') { %>
+            <li><a href="/admin">Admin</a></li>
+          <% } %>
+        <% } else { %>
+          <li><a href="/">Home</a></li>
+          <li><a href="/productos">Producto</a></li>
+          <li><a href="/productos/carrito">Carrito</a></li>
+          <li><a href="/usuario/registro">Registro</a></li>
+          <li><a href="/usuario/login">Login</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>
+  <script src="/js/headerFooter.js"></script>
+</header>

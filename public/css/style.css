@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lobster-Regular", sans-serif;
+  margin: 0;
+  padding: 0%;
+}
+
+/*********** Header Global************/
+header {
+  text-align: center;
+  height: 45px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-bottom: 2px solid rgb(86 48 221);
+
+  width: 100%;
+  height: 45px;
+  align-items: center;
+  background-color: rgb(86 48 221);
+}
+
+nav ul li {
+  display: inline;
+  list-style: none;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: small;
+  margin: 0px;
+  transition: font-size 0.4s; 
+}
+
+nav ul li a:hover {
+  font-size: 1.4rem;
+  color: goldenrod;
+}
+.toggle-btn{
+  margin: 10px;
+}
+
+/*********** FIN Header ************/
+
+
+/********ICONO CARRITO Global******/
+.header-carro {
+  top: 70%;
+  right: 3%;
+  position: fixed;
+  
+  bottom: -200px;
+    
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0,0.2);
+  border: 3px;
+  transition: all 0.5s ease;
+  padding: 10px;
+  }
+  .header-carro .fa-solid.fa-cart-arrow-down {
+    font-size: 22px;
+    transition: transform 0.5s;
+  }
+
+
+
+.header-carro:hover .fa-solid.fa-cart-arrow-down{
+  transform: scale(2);
+} 
+.fa-cart-arrow-down{
+  color:white;
+} 
+/*****FIN ICONO CARRITO ****/
+
+/******** FOOTER Global *********/
+footer {
+  display: flex;
+  text-align: center;
+  padding: 50px 0px 0px 0px;
+  background-color: rgb(86 48 221);
+  color: white;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redes ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* Muestra los elementos de la lista en línea (en una fila) */
+  justify-content: center;
+  /* Centra los elementos de la lista horizontalmente */
+}
+
+.redes ul li {
+  margin: 0 10px;
+  /* Espacio entre cada ícono de red social */
+}
+
+.redes i {
+  color: white;
+  font-size: 2rem;
+  padding: 20px 10px
+}
+
+.linea-divisoria {
+  border: 1% solid #ece7e7;
+  width: 85%;
+  margin: 25px 0px 0px 0px;
+}
+
+.contact-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 15px 0px 15px 0px;
+  font-size: 12px;
+}
+.contact-section2 {
+  font-size: 0.8rem;
+}
+.copy {
+  font-size: 0.8rem;
+}
+/********FIN FOOTER*********/
+
+/*Fin Generales*/
+
+
+/*Imagenes*/
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-baar {
+  width: 40px;
+  height: 40px;
+  background-color: aqua;
+}
+
+.menu-baar-position {
+  background-color: aqua;
+}
+
+.imagen-fondo {
+  width: 100%;
+}
+
+/*Footer Imagenes*/
+
+/*Fin Footer Imagenes*/
+
+/*Fin Imagenes*/
+
+
+
+/*Main Varios*/
+
+.borde-inferior {
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+}
+
+
+/*MENU DESPLEGABLE*/
+.menu-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: end;
+  z-index: 4;
+}
+#toggle-btn{
+  width: fit-content;
+}
+
+#menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  background-color: rgb(86 48 221);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li {
+  padding: 10px;
+}
+/*FIN MENU DESPLEGABLE*/
+
+
+
+/*Media query*/
+
+/*Tablet*/
+@media (min-width:460px) {
+  nav {
+    justify-content: flex-end;
+    height: 60px;
+    
+  }
+  nav ul li {
+    display: inline;
+    list-style: none;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    
+    font-size: 1rem;
+    
+  }
+  .header-carro {
+    
+    width: 60px;
+    height: 60px;
+    
+  }
+  .header-carro .fa-solid.fa-cart-arrow-down {
+    font-size: 30px;
+    
+  }
+  header {
+    text-align: center;
+    height: 60px;
+  }
+  button{
+    cursor: pointer;
+  }
+  
+ 
+
+}
+
+/*Desktop*/
+@media (min-width: 768px) {
+  #menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 100%;
+    background-color: rgb(86 48 221);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #iconoMenu{
+    display: none;
+  }
+  nav a {
+    font-size: 1.1rem;
+  }
+  .header-carro {
+    
+    width: 80px;
+    height: 80px;
+    
+  }
+  .header-carro .fa-solid.fa-cart-arrow-down {
+    font-size: 40px;
+    
+  }
+}

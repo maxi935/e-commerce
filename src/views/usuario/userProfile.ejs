@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', {estilo : "userProfile.css" , titulo : "Profile"
+  }) %>
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <main class="main-perfil">
+      <div class="foto-datos-perfil">
+        <div class="datos-perfil">
+            <div>
+                <img src="/img/usuario/foto-perfil.jpg" alt="foto-perfil" class="img-perfil">
+            </div>
+            <div >
+                <h2><%= locals.userLogged.nombre %></h2>
+                <h3><%= locals.userLogged.email %></h3>
+            </div>
+        </div>
+        
+
+        <section class="detalle-usuario">
+            <h3>Información Personal</h3>
+
+            <p> <strong>Fecha de Nacimiento: </strong> <%= locals.userLogged.fecha_nac %></p>
+            <p> <strong>Celular: </strong> <%= locals.userLogged.celular %></p>
+            <p> <strong>Dirección: </strong> <%= locals.userLogged.direccion %></p>
+            <p> <strong>DNI: </strong> <%= locals.userLogged.dni %></p>
+            <a href="/usuario/logout"><button>logout</button></a>
+
+        </section>
+      </div>
+    </main>
+    <%- include('../partials/footer.ejs')%>
+  </body>
+</html>

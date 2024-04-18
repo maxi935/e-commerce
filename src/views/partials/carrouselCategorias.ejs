@@ -1,0 +1,34 @@
+<% for (let i=0; i < categorias.length; i++) { %>
+    <div>
+        <strong>
+            <%= categorias[i].nombre %>
+        </strong>
+
+    </div>
+    <section class="productos-main-caja">
+        <% for(let j=0; j < categorias[i].Producto.length; j++) { %>
+            <article class="productos-caja">
+                <a href="/productos/detalle/<%= categorias[i].Producto[j].idproducto %>">
+                    <div class="productos-caja-1">
+                        <img class="avatar-imagen" src="/img/avatars/<%= categorias[i].Producto[j].avatar %>"
+                            alt="avatar">
+                        </div>
+                    </a>
+                    <div class="productos-caja-2">
+                        <%= categorias[i].Producto[j].marca %><br>
+                            $<%= categorias[i].Producto[j].precio %>
+                        </div>
+                        <div class="productos-caja-2-botones">
+                            <form action="/productos/agregarcarrito" method="post">
+                                <input type="hidden" name="cantidad" value="1">
+                                <!-- Input de tipo hidden con nombre y valor fijos -->
+                                <input type="hidden" name="idproducto" value="<%= categorias[i].Producto[j].idproducto %>">
+                                <button type="submit" class="add">AGREGAR</button>
+                            </form>
+                            
+                    </div>
+                    </article>
+            <% } %>
+
+    </section>
+    <% } %>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head-->
+<%- include('../partials/head.ejs', {titulo: "Admin" , estilo: "admin.css" })%>
+
+    <body>
+        <!--Header-->
+        <%- include('../partials/header.ejs')%>
+            <!--Main-->
+            <main>
+
+                <section class="box-selection">
+                    <%- include('../partials/botonesAdmin.ejs') %>
+                </section>
+                <section class="box-render">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Descripcion</th>
+                                <th>Categoria</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <% for( let index=0; index < pedidos.length; index++ ) { %>
+                                <tr>
+                                    <td>
+                                        <%= pedidos[index].nombreProducto %>
+                                    </td>
+                                    <td>
+                                        <%= pedidos[index].descripcion %>
+                                    </td>
+                                    <td>
+                                        <%= pedidos[index].categoria %>
+                                    </td>
+                                    <td>
+                                        <%= pedidos[index].cantidad %>
+                                    </td>
+                                    <td>
+                                        <%= pedidos[index].precio %>
+                                    </td>
+                                </tr>
+                                <% } %>
+
+                        </tbody>
+                    </table>
+                </section>
+
+            </main>
+    </body>
+
+</html>

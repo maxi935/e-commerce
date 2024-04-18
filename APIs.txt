@@ -1,0 +1,15 @@
+Usuarios:
+http://localhost:4000/api/usuarios
+http://localhost:4000/api/usuarios/paginado/?pagina=1
+http://localhost:4000/api/usuarios/detalle/:id
+
+Productos:
+http://localhost:4000/api/productos
+http://localhost:4000/api/productos/paginado/?pagina=1
+http://localhost:4000/api/productos/detalle/:id
+http://localhost:4000/api/productos/create
+http://localhost:4000/api/productos/delete
+
+Categorias:
+http://localhost:4000/api/categorias
+http://localhost:4000/api/categorias/:id

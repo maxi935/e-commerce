@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head.ejs', {titulo: "Home", estilo: "index.css"})%>
+  <body>
+    <%- include('partials/header.ejs')%>
+
+    <main>
+      <a href="/productos/carrito">
+      <button class="header-carro">
+        <i class="fa-solid fa-cart-arrow-down"></i>
+    </button>
+  </a>
+      <div class="imgbanner">
+        <img src="/img/productos/bannernew.webp" alt="Imagen banner" />
+      </div>
+      <section class="botonesbebidas">
+        <div class="sin-alcohol">
+          <h3>SIN ALCOHOL </h3>
+          <button class="boton" type="submit">ver mas</button>
+        </div>
+        <div class="gaseosas">
+          <h3>GASEOSAS</h3>
+          <button class="boton" type="submit">ver mas</button>
+        </div>
+        <div class="cervezas">
+          <h3>CERVEZAS</h3>
+          <button class="boton" type="submit">ver mas</button>
+        </div>
+        <div class="tragos">
+          <h3>TRAGOS</h3>
+
+          <button class="boton" type="submit">ver mas</button>
+        </div>
+      </section>
+
+      <section class="contenedor-1">
+        <article class="article-1">
+          <a href="/productos">
+            <div>
+              <img class="imagen-main" src="/img/cervezas-y-tragos.png" alt="" />
+          
+
+              <h4>
+                Explora el Sabor en Cada Trago: Cervezas y Cocteles Artesanales
+              </h4>
+              <p>
+                En nuestro rincón de indulgencia, te invitamos a descubrir la
+                perfección en cada sorbo. Desde la efervescencia refrescante de
+                nuestras cervezas artesanales hasta la creatividad destilada en
+                nuestros cocteles exclusivos, cada opción en nuestra selección está
+                diseñada para deleitar tus sentidos.
+              </p>
+            </div>
+          </a>
+         
+      
+        </article>
+
+        <article class="article-1">
+          <a href="/productos">
+            <div>
+
+          <img class="imagen-main" src="/img/jugos-main.jpg" alt="" />
+          
+          
+          <h4>Jugos Naturales y Refrescantes para Cada Paladar</h4>
+          <p>
+            En nuestro paraíso de sabores naturales, los jugos se destacan como
+            una opción fresca y saludable. Desde los clásicos cítricos hasta las
+            mezclas exóticas, nuestros jugos están diseñados para ofrecer una
+            explosión de frescura en cada sorbo. Descubre la alegría de lo
+            natural en To-Má.
+          </p>
+          
+        </div>
+        </a>
+          
+        </article>
+
+        <article class="article-1">
+          <a href="/productos">
+
+            <div>
+              <img class="imagen-main" src="/img/soda-tax-usda.jpg" alt="" />
+          
+
+              <h4>Gaseosas Clásicas: Dulzura Efervescente en Cada Burbuja</h4>
+              <p>
+                Explora el efervescente mundo de nuestras gaseosas clásicas, donde
+                la dulzura y la carbonatación se combinan para ofrecer una
+                experiencia refrescante inigualable. En To-Má, celebramos las
+                gaseosas con azúcar, brindando momentos de placer en cada botella.
+              </p>
+            </div>
+          
+          </a>
+        </article>
+      </section>
+      <section class="contenedor-2">
+        <article class="article-1">
+          <a href="/productos">
+            <div>
+              <img class="imagen-main" src="/img/dieteticas.jpg" alt="" />
+          
+
+              <h4>Bebidas Sin Azúcares: Frescura sin Remordimientos</h4>
+              <p>
+                Para aquellos que buscan lo refrescante sin el dulzor añadido,
+                nuestra selección de bebidas sin azúcares ofrece la misma
+                satisfacción sin comprometer la salud. Explora el equilibrio
+                perfecto de frescura y ligereza en nuestra empresa.
+              </p>
+            </div>
+          
+          </a>
+        </article>
+
+        <article class="article-1">
+          <a href="/productos">
+            <div>
+              <img class="imagen-main" src="/img/agua-mineral.jpg" alt="" />
+       
+
+              <h4>Agua Mineral: Pureza en Cada Gota</h4>
+              <p>
+                En nuestra colección de aguas minerales, la pureza es la
+                protagonista. Cada botella ofrece la frescura cristalina y los
+                beneficios minerales que solo el agua de calidad puede proporcionar.
+              </p>
+            </div>
+          </a>
+          
+         
+        </article>
+
+        <article class="article-1">
+          <a href="/productos">
+            <div>
+              <img class="imagen-main" src="/img/vino-exportacion.jpg" alt="" />
+          
+
+              <h4>Vinos: Elegancia en Cada Copa</h4>
+              <p>
+                Para los amantes de la sofisticación, nuestra selección de vinos es
+                una oda a la elegancia. Desde tintos robustos hasta blancos
+                afrutados, cada botella cuenta una historia única de viñedos
+                selectos. Eleva tus momentos especiales con nuestras exclusivas
+                opciones de vinos
+              </p>
+            </div>
+          
+          </a>
+        </article>
+      </section>
+    </main>
+    <%- include('partials/footer.ejs')%>
+  </body>
+</html>

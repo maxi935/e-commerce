@@ -1,0 +1,46 @@
+<div class="contenedorcarrusel">
+    <div class="flecha1">
+        <i class="fa-solid fa-arrow-left"></i>
+    </div>
+    <div id="Gaseosas" class="productos-recomendados">
+        <% for( let index=0; index < productos.length; index++ ) { %>
+            <article class="Gaseosa1">
+                <a href="/productos/detalle/<%= productos[index].idproducto %>">
+                    <img src="/img/avatars/<%= productos[index].avatar %>" alt="" />
+                    <div class="detail">
+
+                        <div class="descripcionProducto">
+                            <div class="price">
+                                <strong>
+                                    <%= productos[index].marca %>
+                                </strong>
+                            </div>
+                            <div>
+                                Unidades:
+                                <%= productos[index].disponibilidad %>
+                            </div>
+                            <div>
+                                vol:
+                                <%= productos[index].volumen %>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="price">
+                        <p>Precio</p>
+                        $<%= productos[index].precio %>
+                    </div>
+                </a>
+                <form action="/productos/agregarcarrito" method="post">
+                    <input type="hidden" name="cantidad" value="1">
+                    <!-- Input de tipo hidden con nombre y valor fijos -->
+                    <input type="hidden" name="idproducto" value="<%= productos[index].idproducto %>">
+                    <button type="submit" class="add">AGREGAR</button>
+                </form>
+            </article>
+            <% } %>
+    </div>
+    <div class="flecha2">
+        <i class="fa-solid fa-arrow-right"></i>
+    </div>
+</div>

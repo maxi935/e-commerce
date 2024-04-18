@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head.ejs', {titulo: "Carrito" , estilo: "carrito.css" })%>
+
+  <body>
+    <%- include('../partials/header.ejs')%>
+
+      <main>
+        <!--CARRITO-->
+        <section class="carrito-section">
+
+          <div class="carrito-img-agregados">
+
+            <!--Resumen de Compras-->
+            <div class="carrito-descripcion">
+
+              <!--Compras agregadas al carrito-->
+<% for( let index = 0; index < carritoProductos.length; index++ ) { %>
+
+  <div class="item-carrito">
+    <div>
+      <img class="carrito-img-chica" src="/img/avatars/<%= carritoProductos[index].avatar %>" alt="">
+      <div class="info-item">
+        <div>
+          <strong><%= carritoProductos[index].marca %></strong>
+        </div>
+
+        <form action="/productos/agregarcarrito" method="post">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" name="cantidad" value="<%= carritoProductos[index].cantidad %>">
+          <input type="hidden" name="idproducto" value="<%= carritoProductos[index].idproducto %>">
+          <div class="carrito-botones">
+            <button type="submit" name="modificar">Modificar</button>
+          </div>
+        </form>
+        
+        <form action="/productos/carrito/eliminar?_method=DELETE" method="post">
+          <input type="hidden" name="idproducto" value="<%= carritoProductos[index].idproducto %>">
+          <div class="carrito-botones">
+            <button type="submit" name="eliminar">Eliminar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+<% } %>
+
+            </div>
+
+            <!--RESUMEN COMPRA-->
+            <!--Nombre Producto-->
+            <div class="carrito-producto">
+              <h2 class="titulo-carrito">Resumen de Compra</h2>
+              <div class="total-items">
+
+                <h3>Producto/s(cantidad)</h3>
+                <h3><%= cantidadestotales %></h3>
+
+              </div>
+              <div class="total-items">
+                <h3>Envio</h3>
+                <h3>Impuesto por Cadeteria</h3>
+              </div>
+              <div class="total-items">
+                <h3>TOTAL</h3>
+                <h3>$<%= total %></h3>
+              </div>
+              <form action="/admin/pedidos" method="post">
+              <div class="boton-compra">
+                <button type="submit">Comprar</button>
+              </div>
+            </form>
+            </div>
+          </div>
+
+          <!--Botones-->
+          </section>
+          <!--RULETA----Tambien te interesó-->
+          <h3 class="titulo-ruleta">También te interesó</h3>
+          <section class="ruleta-section">
+
+            <article class="ruleta-article">
+              <img class="ruleta-img" src="/img/carrito/botellahielo.jpg" alt="Producto 1" />
+              <h4>Producto 1</h4>
+              <p>Precio: $</p>
+              <button>Añadir al carrito</button>
+            </article>
+
+            <article class="ruleta-article">
+              <img class="ruleta-img" src="/img/carrito/botellahielo.jpg" alt="Producto 2" />
+              <h4>Producto 2</h4>
+              <p>Precio: $</p>
+              <button>Añadir al carrito</button>
+            </article>
+
+            <article class="ruleta-article">
+              <img class="ruleta-img" src="/img/carrito/botellahielo.jpg" alt="Producto 3" />
+              <h4>Producto 3</h4>
+              <p>Precio: $</p>
+              <button>Añadir al carrito</button>
+            </article>
+
+            <article class="ruleta-article">
+              <img class="ruleta-img" src="/img/carrito/botellahielo.jpg" alt="Producto 4" />
+              <h4>Producto 4</h4>
+              <p>Precio: $</p>
+              <button>Añadir al carrito</button>
+            </article>
+
+          </section>
+          </div>
+      </main>
+      <%- include('../partials/footer.ejs')%>
+  </body>
+
+</html>

@@ -1,0 +1,48 @@
+.main-perfil{
+
+
+    background-color: aliceblue;
+    height: 100vh;
+    
+}
+.foto-datos-perfil{
+    display: flex;
+    flex-direction: column;
+}
+.img-perfil{
+    border-radius: 50%;
+    border: 2px solid blue;
+    width: 100px;
+}
+.datos-perfil{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid blue;
+    padding: 10px;
+}
+.detalle-usuario{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+/*Tablet*/
+@media (min-width:460px) {
+    
+
+    
+    
+  }
+  
+  
+  /*Desktop*/
+  @media (min-width: 768px) {
+    
+    
+    
+    
+  }

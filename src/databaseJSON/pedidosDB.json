@@ -1,0 +1,47 @@
+[
+    {
+        "id": "7affd061-632a-402b-ba70-218e1a8936cf",
+        "nombreProducto": "Stella Artois 269 ml",
+        "descripcion": "Cerveza rubia",
+        "cantidad": "10",
+        "imagenProducto": "1705967918794_img.jpg",
+        "categoria": "Cerveza",
+        "precio": 1400
+    },
+    {
+        "id": "c39d6367-0c51-49ed-8a85-da7708d172f7",
+        "nombreProducto": "Soda Manaos 2lts",
+        "descripcion": "Bebida sin alcohol",
+        "cantidad": 1,
+        "imagenProducto": "1705967968392_img.jpg",
+        "categoria": "Soda",
+        "precio": 1200
+    },
+    {
+        "id": "34aace58-6387-4f03-8ae0-1a6c6cae3418",
+        "nombreProducto": "Quilmes 473 ml",
+        "descripcion": "Cerveza rubia en lata",
+        "cantidad": 1,
+        "imagenProducto": "1705968000484_img.jpg",
+        "categoria": "Cerveza",
+        "precio": 1300
+    },
+    {
+        "id": "cb7f15bf-b1e7-4bd6-8647-28b5813be6b8",
+        "nombreProducto": "Coca-Cola 1,5 lts",
+        "descripcion": "Coca cola zero",
+        "cantidad": "10",
+        "imagenProducto": "1705968564771_img.jpg",
+        "categoria": "gaseosa",
+        "precio": 1200
+    },
+    {
+        "id": "69b4097d-148c-4cb5-9b75-0688c5bf68dc",
+        "nombreProducto": "Coca-Cola 3 lts",
+        "descripcion": "Gaseosa de sabor cola original",
+        "cantidad": 1,
+        "imagenProducto": "1705967791201_img.jpg",
+        "categoria": "gaseosa",
+        "precio": 1800
+    }
+]
