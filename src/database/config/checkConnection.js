@@ -2,10 +2,10 @@ const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize({
     dialect: 'mysql',
-    host: '127.0.0.1',
-    username: 'root',
-    password: 'root',
-    database: 'bebidasonline'
+    host: 'bjxeidmkkz8ceml3v2tm-mysql.services.clever-cloud.com',
+    username: 'udc7azi5hdeo61zv',
+    password: '3Dh5rOIszW05o8JaaQT0',
+    database: 'bjxeidmkkz8ceml3v2tm'
 });
 
 async function checkConnection() {
